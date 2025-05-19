@@ -2,17 +2,17 @@ import Product from "../Product";
 import Button from "../Button/Button";
 import Alert from "../Alert/Alert";
 import UserMenu from "../UserMenu/UserMenu";
+import { useState } from "react";
 
 export default function App() {
   const handleClick = () => {
     console.log("I'm a button!");
   };
 
-  let clicks = 0;
+  const [clicks, setClicks] = useState(0);
 
-  const handleClickTwo = () => {
-    clicks = clicks + 1;
-    console.log(clicks);
+  const handleClickThree = () => {
+    setClicks(clicks + 1);
   };
 
   return (
@@ -38,7 +38,7 @@ export default function App() {
         <Button variant="primary" text="Login" />
         <Button variant="secondary" text="Follow" />
         <button onClick={handleClick}>Click me!</button>;
-        <button onClick={handleClickTwo}>Current: {clicks}</button>;
+        <button onClick={handleClickThree}>Current: {clicks}</button>;
       </>
     </>
   );
