@@ -8,6 +8,13 @@ export default function App() {
     console.log("I'm a button!");
   };
 
+  let clicks = 0;
+
+  const handleClickTwo = () => {
+    clicks = clicks + 1;
+    console.log(clicks);
+  };
+
   return (
     <>
       <UserMenu name="" />
@@ -31,6 +38,7 @@ export default function App() {
         <Button variant="primary" text="Login" />
         <Button variant="secondary" text="Follow" />
         <button onClick={handleClick}>Click me!</button>;
+        <button onClick={handleClickTwo}>Current: {clicks}</button>;
       </>
     </>
   );
