@@ -1,5 +1,3 @@
-import axios from "axios";
-
 import Product from "../Product";
 import Button from "../Button/Button";
 import Alert from "../Alert/Alert";
@@ -15,10 +13,6 @@ import { fetchArticles } from "../../services/articleService";
 interface Values {
   x: number;
   y: number;
-}
-
-interface ArticlesHttpResponse {
-  hits: Article[];
 }
 
 export default function App() {
