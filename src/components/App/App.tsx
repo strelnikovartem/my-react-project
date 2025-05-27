@@ -10,6 +10,7 @@ import OrderForm from "../OrderForm/OrderForm";
 import SearchForm from "../SearchForm/SearchForm";
 import type { Article } from "../types/article";
 import ArticleList from "../ArticleList/ArticleList";
+import { fetchArticles } from "../../services/articleService";
 
 interface Values {
   x: number;
@@ -49,10 +50,8 @@ export default function App() {
     try {
       setIsLoading(true);
       setIsError(false);
-      const response = await axios.get<ArticlesHttpResponse>(
-        `https://hn.algolia.com/api/v1/search?query=${topic}`
-      );
-      setArticles(response.data.hits);
+      const data = await fetchArticles(topic);
+      setArticles(data);
     } catch {
       setIsError(true);
     } finally {
