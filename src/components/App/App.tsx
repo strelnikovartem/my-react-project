@@ -8,7 +8,7 @@ import { useState } from "react";
 import ClickCounter from "../ClickCounter";
 import OrderForm from "../OrderForm/OrderForm";
 import SearchForm from "../SearchForm/SearchForm";
-import { Article } from "../types/article";
+import type { Article } from "../types/article";
 import ArticleList from "../ArticleList/ArticleList";
 
 interface Values {
