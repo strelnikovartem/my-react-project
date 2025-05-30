@@ -1,58 +1,30 @@
 import Product from "../Product";
-import Button from "../Button/Button";
 import Alert from "../Alert/Alert";
 import UserMenu from "../UserMenu/UserMenu";
 import { useState } from "react";
-import ClickCounter from "../ClickCounter";
 import OrderForm from "../OrderForm/OrderForm";
 import SearchForm from "../SearchForm/SearchForm";
 import type { Article } from "../types/article";
 import ArticleList from "../ArticleList/ArticleList";
-import { fetchArticles } from "../../services/articleService";
-
-interface Values {
-  x: number;
-  y: number;
-}
+import { getArticles } from "../../services/articleService";
 
 export default function App() {
-  const [values, setValues] = useState<Values>({ x: 0, y: 0 });
-
-  const updateValue = (key: keyof Values) => {
-    setValues({
-      ...values,
-      [key]: values[key] + 1,
-    });
-  };
-
-  const [clicks, setClicks] = useState(0);
-
-  const handleClick = () => {
-    setClicks(clicks + 1);
-  };
-
-  const handleOrder = (data: string) => {
-    console.log("Order received from:", data);
-    // можна зберегти замовлення, викликати API, показати повідомлення тощо
-  };
-
   const [articles, setArticles] = useState<Article[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const handleSearch = async (topic: string) => {
+  const handleSearch = async (newTopic: string) => {
     try {
       setIsLoading(true);
       setIsError(false);
-      const data = await fetchArticles(topic);
-      setArticles(data);
+      const newArticles = await getArticles(newTopic);
+      setArticles(newArticles);
     } catch {
       setIsError(true);
     } finally {
       setIsLoading(false);
     }
   };
-
   return (
     <>
       <UserMenu name="" />
@@ -72,28 +44,13 @@ export default function App() {
         <Alert type="success" />
         <Alert type="error" />
       </>
+      <OrderForm />
       <>
-        <Button variant="primary" text="Login" />
-        <Button variant="secondary" text="Follow" />
-        <ClickCounter value={clicks} onUpdate={handleClick} />
-        <ClickCounter value={clicks} onUpdate={handleClick} />
-      </>
-      <>
-        <p>
-          x: {values.x}, y: {values.y}
-        </p>
-        <button onClick={() => updateValue("x")}>Update x</button>
-        <button onClick={() => updateValue("y")}>Update y</button>
-      </>
-
-      <h1>Place your order</h1>
-      <OrderForm onSubmit={handleOrder} />
-      <div>
-        <SearchForm onSubmit={handleSearch} />
-        {isLoading && <p>Loading data, please wait...</p>}
-        {isError && <p>Whoops, something went wrong! Please try again!</p>}
+        <SearchForm onSearch={handleSearch} />
+        {isLoading && <strong>Loading articles...</strong>}
+        {isError && <strong>Something went wrong please try again...</strong>}
         {articles.length > 0 && <ArticleList items={articles} />}
-      </div>
+      </>
     </>
   );
 }

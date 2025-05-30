@@ -1,14 +1,13 @@
 import axios from "axios";
-import type { Article } from "../components/types/article";
+import { type Article } from "../components/types/article";
 
-interface ArticlesHttpResponse {
+interface GetArticlesRes {
   hits: Article[];
 }
 
-// HTTP-функція запиту статей
-export const fetchArticles = async (topic: string): Promise<Article[]> => {
-  const response = await axios.get<ArticlesHttpResponse>(
+export const getArticles = async (topic: string) => {
+  const res = await axios.get<GetArticlesRes>(
     `https://hn.algolia.com/api/v1/search?query=${topic}`
   );
-  return response.data.hits;
+  return res.data.hits;
 };
