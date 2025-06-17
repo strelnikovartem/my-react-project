@@ -54,3 +54,11 @@ export default function App() {
     </>
   );
 }
+
+let a = ["Mango", "Poly"];
+let b = a;
+
+a[1] = "Jacob";
+
+console.log(a);
+console.log(b);
