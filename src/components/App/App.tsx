@@ -55,6 +55,7 @@ export default function App() {
   );
 }
 
-const product = "Repair droid";
-const number = product[product.length - 1];
+const product = 12.5;
+const number = Math.floor(product);
+
 console.log(number);
