@@ -55,7 +55,7 @@ export default function App() {
   );
 }
 
-const product = 12.5;
-const number = Math.random();
+const product = 12.545;
+const number = product.toFixed();
 
 console.log(number);
