@@ -55,7 +55,7 @@ export default function App() {
   );
 }
 
-const product = 12.545;
+const product = 12.8;
 const number = product.toFixed();
 
 console.log(number);
