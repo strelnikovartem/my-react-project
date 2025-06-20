@@ -55,9 +55,9 @@ export default function App() {
   );
 }
 
-function doStaff() {
-  console.log(`wow`);
+function doStaff(x, y, z) {
+  console.log(`result: ${x + y + z}`);
 }
 
-doStaff();
-doStaff();
+doStaff(1, 2, 3);
+doStaff(10, 20, 30);
