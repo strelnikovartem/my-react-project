@@ -55,10 +55,6 @@ export default function App() {
   );
 }
 
-let a = ["Mango", "Poly"];
-let b = a;
-
-a[1] = "Jacob";
-
-console.log(a);
-console.log(b);
+const product = "Repair droid";
+const number = product[product.length - 1];
+console.log(number);
