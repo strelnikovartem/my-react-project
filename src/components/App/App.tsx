@@ -55,7 +55,9 @@ export default function App() {
   );
 }
 
-const product = 12.8;
-const number = product.toFixed();
+function doStaff() {
+  console.log(`wow`);
+}
 
-console.log(number);
+doStaff();
+doStaff();
