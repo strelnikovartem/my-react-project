@@ -54,14 +54,3 @@ export default function App() {
     </>
   );
 }
-
-function doStaff(x, y, z) {
-  const top = x + y + z;
-  return top;
-}
-
-const top1 = doStaff(1, 2, 3);
-const top2 = doStaff(10, 20, 30);
-
-console.log(top1);
-console.log(top2);
