@@ -56,6 +56,6 @@ export default function App() {
 }
 
 const product = 12.5;
-const number = Math.floor(product);
+const number = Math.round(product);
 
 console.log(number);
