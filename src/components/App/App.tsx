@@ -55,10 +55,13 @@ export default function App() {
   );
 }
 
-function checkAge(age) {
-  if (age >= 18) {
-    return `You are an adult`;
+function checkGrade(grade) {
+  if (grade >= 70) {
+    return "Satisfactory";
+  } else {
+    return "Unsatisfactory";
   }
 }
 
-console.log(checkAge(11));
+console.log(checkGrade(40)); // Unsatisfactory
+console.log(checkGrade(75)); // Satisfactory
