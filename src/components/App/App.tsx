@@ -56,11 +56,9 @@ export default function App() {
 }
 
 function multiply(x, y, z) {
-  console.log("The code before return is executed as usual");
-
-  return x * y * z;
-
-  console.log("This code is never executed because it is after return");
+  console.log(`Result: ${x * y * z}`);
 }
 
-console.log(multiply(2, 3, 5)); // 30
+console.log("Log before multiply execution");
+multiply(2, 3, 5); // "Result: 30"
+console.log("Log after multiply execution");
