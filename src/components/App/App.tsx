@@ -55,15 +55,10 @@ export default function App() {
   );
 }
 
-function getPrice(subscription) {
-  let price = 0;
-
-  if (subscription === "pro") {
-    price = 100;
+function checkAge(age) {
+  if (age >= 18) {
+    return `You are an adult`;
   }
-
-  return price;
 }
 
-console.log(getPrice("free")); // 0
-console.log(getPrice("pro")); // 100
+console.log(checkAge(11));
