@@ -54,3 +54,13 @@ export default function App() {
     </>
   );
 }
+
+function multiply(x, y, z) {
+  console.log("The code before return is executed as usual");
+
+  return x * y * z;
+
+  console.log("This code is never executed because it is after return");
+}
+
+console.log(multiply(2, 3, 5)); // 30
