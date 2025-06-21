@@ -55,10 +55,15 @@ export default function App() {
   );
 }
 
-function multiply(x, y, z) {
-  console.log(`Result: ${x * y * z}`);
+function getPrice(subscription) {
+  let price = 0;
+
+  if (subscription === "pro") {
+    price = 100;
+  }
+
+  return price;
 }
 
-console.log("Log before multiply execution");
-multiply(2, 3, 5); // "Result: 30"
-console.log("Log after multiply execution");
+console.log(getPrice("free")); // 0
+console.log(getPrice("pro")); // 100
