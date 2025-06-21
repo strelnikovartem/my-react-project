@@ -54,13 +54,3 @@ export default function App() {
     </>
   );
 }
-
-function checkStorage(available, ordered) {
-  if (available < ordered) {
-    return "Not enough goods in stock!";
-  } else {
-    return "Order is processed, our manager will contact you";
-  }
-}
-
-console.log(checkStorage(10, 50));
