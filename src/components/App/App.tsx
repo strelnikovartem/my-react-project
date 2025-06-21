@@ -55,13 +55,12 @@ export default function App() {
   );
 }
 
-function checkGrade(grade) {
-  if (grade >= 70) {
-    return "Satisfactory";
+function checkStorage(available, ordered) {
+  if (available < ordered) {
+    return "Not enough goods in stock!";
   } else {
-    return "Unsatisfactory";
+    return "Order is processed, our manager will contact you";
   }
 }
 
-console.log(checkGrade(40)); // Unsatisfactory
-console.log(checkGrade(75)); // Satisfactory
+console.log(checkStorage(10, 50));
