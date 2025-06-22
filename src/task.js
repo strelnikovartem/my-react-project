@@ -1,14 +1,24 @@
-const fruit = "apple";
+function getSubscriptionPrice(type) {
+  switch (type) {
+    case "starter":
+      return 0;
+      break;
 
-switch (fruit) {
-  case "apple":
-    console.log("Apple selected");
+    case "professional":
+      return 20;
+      break;
 
-  case "banana":
-    console.log("Banana selected");
-  case "orange":
-    console.log("Orange selected");
-    break;
-  default:
-    console.log("The fruit is unknown");
+    case "organization":
+      return 50;
+      break;
+
+    default:
+      return "Invalid subscription type!";
+      break;
+  }
 }
+
+console.log(getSubscriptionPrice("starter"));
+console.log(getSubscriptionPrice("professional"));
+console.log(getSubscriptionPrice("organization"));
+console.log(getSubscriptionPrice("star"));
