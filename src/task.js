@@ -1,7 +1,15 @@
-function getBiggerNumber(a, b) {
-  return a > b ? a : b;
-}
+const fruit = "orang";
 
-console.log(getBiggerNumber(5, 10)); // 10
-console.log(getBiggerNumber(20, 15)); // 20
-console.log(getBiggerNumber(7, 7)); // 7
+switch (fruit) {
+  case "apple":
+    console.log("Apple selected");
+    break;
+  case "banana":
+    console.log("Banana selected");
+    break;
+  case "orange":
+    console.log("Orange selected");
+    break;
+  default:
+    console.log("The fruit is unknown");
+}
