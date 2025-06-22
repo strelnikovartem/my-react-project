@@ -1,3 +1,3 @@
-const number = 10 > 19;
+const number = 10;
 
 console.log(Boolean(number));
