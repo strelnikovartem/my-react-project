@@ -1,3 +1,6 @@
-const age = 20;
-const tpe = age >= 18 ? "adult" : "child";
-console.log(tpe); // 'adult'
+const a = 15;
+const b = 10;
+
+const bigNumber = a > b ? "first" : "two";
+
+console.log(bigNumber);
