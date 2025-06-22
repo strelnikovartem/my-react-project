@@ -1,10 +1,3 @@
-let type;
-const age = 10;
-
-if (age >= 18) {
-  type = "adult";
-} else {
-  type = "child";
-}
-
-console.log(type); // 'adult'
+const age = 20;
+const tpe = age >= 18 ? "adult" : "child";
+console.log(tpe); // 'adult'
