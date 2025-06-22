@@ -1,23 +1,3 @@
-function getSubscriptionPrice(type) {
-  switch (type) {
-    case "starter":
-      return 0;
-      break;
+const number = 10 > 19;
 
-    case "professional":
-      return 20;
-      break;
-
-    case "organization":
-      return 50;
-      break;
-
-    default:
-      return "Invalid subscription type!";
-  }
-}
-
-console.log(getSubscriptionPrice("starter"));
-console.log(getSubscriptionPrice("professional"));
-console.log(getSubscriptionPrice("organization"));
-console.log(getSubscriptionPrice("star"));
+console.log(Boolean(number));
