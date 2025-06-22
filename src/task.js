@@ -1,8 +1,8 @@
-console.log(0 || false); // false
-console.log(false || 0); // 0
+const isBlocked = true;
+const canChat = !isBlocked; // !false -> true
 
-const a = 10 + 11;
-const b = 2 - 1;
-
-console.log(a || b); // ""
-console.log("" || null); // null
+if (canChat) {
+  console.log("Can type in chat!");
+} else {
+  console.log("Blocked from typing in chat!");
+}
