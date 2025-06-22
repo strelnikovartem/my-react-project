@@ -14,7 +14,6 @@ function getSubscriptionPrice(type) {
 
     default:
       return "Invalid subscription type!";
-      break;
   }
 }
 
