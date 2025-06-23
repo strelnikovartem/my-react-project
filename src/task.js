@@ -1,10 +1,11 @@
-function countClients(clientCounter, maxClients) {
-  let counter = clientCounter; // створюємо локальну змінну
-
-  while (counter < maxClients) {
-    console.log(counter);
-    counter += 1;
+function calculateTotal(number) {
+  let totalNumber = 0;
+  let total = 0;
+  while (totalNumber <= number) {
+    total += totalNumber;
+    totalNumber++;
   }
+  return total;
 }
 
-countClients(18, 25);
+console.log(calculateTotal(18));
