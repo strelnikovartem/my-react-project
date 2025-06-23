@@ -1,8 +1,8 @@
-const isBlocked = true;
-const canChat = !isBlocked; // !false -> true
-
-if (canChat) {
-  console.log("Can type in chat!");
-} else {
-  console.log("Blocked from typing in chat!");
+function getFileName(file) {
+  const index = file.indexOf(".");
+  return index === -1 ? file : file.slice(0, index);
 }
+
+console.log(getFileName("styles.css"));
+console.log(getFileName("styles.css"));
+console.log(getFileName("app"));
