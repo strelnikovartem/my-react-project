@@ -1,8 +1,10 @@
-function getFileName(file) {
-  const index = file.indexOf(".");
-  return index === -1 ? file : file.slice(0, index);
+function countClients(clientCounter, maxClients) {
+  let counter = clientCounter; // створюємо локальну змінну
+
+  while (counter < maxClients) {
+    console.log(counter);
+    counter += 1;
+  }
 }
 
-console.log(getFileName("styles.css"));
-console.log(getFileName("styles.css"));
-console.log(getFileName("app"));
+countClients(18, 25);
