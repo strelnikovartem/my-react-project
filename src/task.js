@@ -1,23 +1,17 @@
-const start = 17;
-const end = 25;
-let number;
+function findNumber(max, target) {
+  console.log("Log in the body of the function before the cycle");
 
-for (let i = start; i < end; i++) {
-  if (i % 5 === 0) {
-    number = i;
-    break;
+  for (let i = 5; i <= max; i += 1) {
+    console.log("Current counter value i:", i);
+
+    if (i === target) {
+      console.log(`Found the number $ {target}, interrupt the cycle`);
+      break;
+    }
   }
+
+  console.log("Log in body function after cycle");
 }
 
-console.log(number);
-
-// for (let i = 0; i < 10; i += 1) {
-//   console.log(i);
-
-//   if (i === 5) {
-//     console.log("Met the number 5, interrupt the execution of the cycle");
-//     break;
-//   }
-// }
-
-// console.log("Log after cycle");
+findNumber(10, 6);
+console.log("Log after exiting function");
