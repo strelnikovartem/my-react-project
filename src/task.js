@@ -1,11 +1,14 @@
-function calculateTotal(number) {
-  let totalNumber = 0;
-  let total = 0;
-  while (totalNumber <= number) {
-    total += totalNumber;
-    totalNumber++;
+function sumUpTo(number) {
+  let sum = 0;
+
+  for (let i = 0; i <= number; i += 1) {
+    console.log(i);
+    sum += i;
   }
-  return total;
+
+  return sum;
 }
 
-console.log(calculateTotal(18));
+console.log(sumUpTo(5)); // 15
+// console.log(sumUpTo(10)); // 55
+// console.log(sumUpTo(0)); // 0
