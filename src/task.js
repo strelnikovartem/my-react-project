@@ -1,7 +1,4 @@
 const planets = ["Earth", "Mars", "Venus"];
-
-if (planets.length >= 3) {
-  console.log("3 or more elements");
-} else {
-  console.log("3 or less elements");
-}
+const lastElementIndex = planets.length - 1;
+console.log(planets[lastElementIndex]); // "Venus"
+console.log(lastElementIndex);
