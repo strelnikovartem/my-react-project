@@ -1,11 +1,7 @@
-const name = "Mango";
-const letters = name.split("");
-console.log(letters); // ["M", "a", "n", "g", "o"]
+function calculateEngravingPrice(message, pricePerWord) {
+  const totalMessage = message.split(" ");
+  return totalMessage.length * pricePerWord;
+}
 
-const message = "JavaScript essentials";
-const words = message.split(" ");
-console.log(words); // ["JavaScript", "essentials"]
-
-const slug = "amazing-french-recipes";
-const slugParts = slug.split("");
-console.log(slugParts); // ["amazing", "french", "recipes"]
+console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+console.log(calculateEngravingPrice("Web-development is creative work", 40));
