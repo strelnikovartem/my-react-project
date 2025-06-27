@@ -1,3 +1,5 @@
-const planets = ["Earth", "Mars", "Venus", "Jupiter", "Saturn"];
-console.log(planets.slice(-2)); // ["Mars", "Venus", "Jupiter", "Saturn"]
-console.log(planets.slice(2)); // ["Venus", "Jupiter", "Saturn"]
+const firstArray = ["Mercury", "Venus"];
+const secondArray = ["Mars", "Jupiter"];
+const result = firstArray.concat(secondArray);
+
+console.log(result); // ["Mercury", "Venus", "Mars", "Jupiter"];
