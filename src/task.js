@@ -1,7 +1,4 @@
-function calculateEngravingPrice(message, pricePerWord) {
-  const totalMessage = message.split(" ");
-  return totalMessage.length * pricePerWord;
-}
-
-console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
-console.log(calculateEngravingPrice("Web-development is creative work", 40));
+const planets = ["Earth", "Mars", "Venus", "Jupiter", "Saturn"];
+console.log(planets.slice(0, 2)); // ['Earth', 'Mars']
+console.log(planets.slice(0, 4)); // ['Earth', 'Mars', 'Venus', 'Jupiter']
+console.log(planets.slice(1, 3)); // ['Mars', 'Venus']
