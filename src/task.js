@@ -1,7 +1,8 @@
-const words = ["JavaScript", "is", "amazing"];
+function transformString(string) {
+  const words = string.split(" ");
+  console.log(words);
+  return words.join("-");
+}
 
-const newwWords = words.join("!");
-console.log(newwWords);
-console.log(words.join("")); // 'JavaScriptisamazing'
-console.log(words.join(" ")); // 'JavaScript is amazing'
-console.log(words.join("-")); // 'JavaScript-is-amazing'
+console.log(transformString("user_age")); // "user-age"
+transformString("price_per_droid"); // "price-per-droid"
