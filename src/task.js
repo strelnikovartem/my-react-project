@@ -1,17 +1,7 @@
-const emptyArray = [];
-const nonEmptyArray = [1, 2, 3];
+const words = ["JavaScript", "is", "amazing"];
 
-console.log(Boolean(emptyArray)); // true
-console.log(Boolean(nonEmptyArray)); // true
-
-if (!emptyArray) {
-  console.log("if is in progress");
-} else {
-  console.log("else is not performed");
-}
-
-if (nonEmptyArray) {
-  console.log("if is in progress");
-} else {
-  console.log("else is not performed");
-}
+const newwWords = words.join("!");
+console.log(newwWords);
+console.log(words.join("")); // 'JavaScriptisamazing'
+console.log(words.join(" ")); // 'JavaScript is amazing'
+console.log(words.join("-")); // 'JavaScript-is-amazing'
