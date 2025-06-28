@@ -1,10 +1,12 @@
-function calculateTotalPrice(order) {
-  let sum = 0;
-  for (let index = 0; index < order.length; index++) {
-    sum += order[index];
+function getEvenNumbers(start, end) {
+  const dubl = [];
+  for (let i = start; i <= end; i++) {
+    if (i % 2 === 0) {
+      dubl.push(i);
+    }
   }
-  return sum;
+  return dubl;
 }
 
-console.log(calculateTotalPrice([12, 85, 37, 4]));
-console.log(calculateTotalPrice([164, 48, 291]));
+console.log(getEvenNumbers(2, 5));
+console.log(getEvenNumbers(3, 11));
