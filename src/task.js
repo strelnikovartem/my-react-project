@@ -1,12 +1,7 @@
-function getEvenNumbers(start, end) {
-  const dubl = [];
-  for (let i = start; i <= end; i++) {
-    if (i % 2 === 0) {
-      dubl.push(i);
-    }
-  }
-  return dubl;
-}
+const fruits = ["apple", "banana", "orange"];
 
-console.log(getEvenNumbers(2, 5));
-console.log(getEvenNumbers(3, 11));
+if (fruits.includes("banana")) {
+  console.log("The array has an element banana");
+} else {
+  console.log("Array does not contain banana element");
+}
