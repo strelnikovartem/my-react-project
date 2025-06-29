@@ -1,7 +1,5 @@
-function greet(username = "Guest") {
-  console.log(`Hello, ${username}!`);
-}
+const multiply = function (x, y, z) {
+  console.log(x * y * z);
+};
 
-greet("Jacob"); // "Hello, Jacob!"
-greet("Jac"); // "Hello, Jacob!"
-greet(); // "Hello, Guest!"
+multiply(1, 2, 3);
