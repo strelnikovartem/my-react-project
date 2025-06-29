@@ -19,3 +19,10 @@ function foo() {
 
 console.log(foo(1, 2, 3)); // Поверне "1-2-3"
 console.log(foo(1, 2, 3, 4));
+
+function createReversedArray() {
+  const arg = Array.from(arguments);
+  return arg.toReversed();
+}
+
+console.log(createReversedArray(12, 85, 37, 4));
