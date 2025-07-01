@@ -6,14 +6,16 @@ const book = {
   rating: 8.38,
 };
 
-console.log(book.rating); // 9
-console.log(book.isPublic); // false
-console.log(book.genres); // ["historical prose", "adventure", "drama"]
+// console.log(book);
 
-book.rating = 9;
-book.isPublic = false;
-book.genres.push("drama");
+book.pageCount = 836;
+book.originalLanguage = "en";
+book.translations = ["ua", "ru"];
+book.price = {
+  hardcover: 39,
+  softcover: 29,
+};
 
-console.log(book.rating); // 9
-console.log(book.isPublic); // false
-console.log(book.genres); // ["historical prose", "adventure", "drama"]
+console.log(book.pageCount); // 836
+console.log(book.originalLanguage); // "en"
+console.log(book.translations); // ["ua", "ru"]
