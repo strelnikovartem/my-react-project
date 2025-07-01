@@ -6,6 +6,10 @@ const book = {
   rating: 8.38,
 };
 
+console.log(book.rating); // 9
+console.log(book.isPublic); // false
+console.log(book.genres); // ["historical prose", "adventure", "drama"]
+
 book.rating = 9;
 book.isPublic = false;
 book.genres.push("drama");
