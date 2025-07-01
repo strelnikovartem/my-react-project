@@ -6,6 +6,8 @@ const book = {
   rating: 8.38,
 };
 
+console.log();
+
 console.log(book.title); // "The Last Kingdom"
 console.log(book["title"]); // "The Last Kingdom"
 
