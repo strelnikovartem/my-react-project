@@ -1,14 +1,21 @@
-const apartment = {
-  descr: "Spacious apartment in the city center",
-  rating: 4,
-  price: 2153,
-};
-const values = [];
-const keys = Object.keys(apartment);
+function countProps(object) {
+  let propCount = 0;
 
-for (const key of keys) {
-  values.push(apartment[key]);
+  // for (const key in object) {
+  //   if (object.hasOwnProperty(key)) {
+  //     propCount += 1;
+  //   }
+  // }
+
+  const keys = Object.keys(object);
+
+  for (const key of keys) {
+    propCount += 1;
+  }
+
+  return propCount;
 }
 
-console.log(keys);
-console.log(values);
+console.log(countProps({}));
+console.log(countProps({ name: "Mango", age: 2 }));
+console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
