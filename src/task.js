@@ -4,13 +4,15 @@ const apartment = {
   price: 2153,
 };
 
-const keys = [];
-const values = [];
+const key = Object.keys(apartment);
 
-for (const key in apartment) {
-  keys.push(key);
-  values.push(apartment[key]);
-}
+console.log(key);
 
-console.log(keys);
-console.log(values);
+const book = {
+  title: "The Last Kingdom",
+  author: "Bernard Cornwell",
+  genres: ["historical prose", "adventure"],
+  rating: 8.38,
+};
+const keys = Object.keys(book);
+console.log(keys); // ['title', 'author', 'genres', 'rating']
