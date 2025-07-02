@@ -1,10 +1,7 @@
-const name = "Henry Sibola";
-const age = 25;
-
+const propName = "name";
 const user = {
-  name: name,
-  age: age,
+  age: 25,
 };
 
+user[propName] = "Henry Sibola";
 console.log(user.name); // "Henry Sibola"
-console.log(user.age); // 25
