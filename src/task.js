@@ -1,7 +1,11 @@
-const propName = "name";
-const user = {
-  age: 25,
+const book = {
+  title: "The Last Kingdom",
+  author: "Bernard Cornwell",
+  genres: ["historical prose", "adventure"],
+  rating: 8.38,
 };
 
-user[propName] = "Henry Sibola";
-console.log(user.name); // "Henry Sibola"
+for (const key in book) {
+  console.log(key); // Ключ
+  console.log(book[key]); // Значення властивості з таким ключем
+}
