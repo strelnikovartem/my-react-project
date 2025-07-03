@@ -8,10 +8,13 @@ const books = [
   },
 ];
 
-const titles = [];
+let totalRating = 0;
 
 for (const book of books) {
-  titles.push(book.author);
+  totalRating += book.rating;
 }
 
-console.log(titles); // ["The Last Kingdom", "Beside Still Waters", "The Dream of a Ridiculous Man"]
+console.log(totalRating);
+
+const averageRating = totalRating / books.length;
+console.log(averageRating); // 8
