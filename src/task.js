@@ -10,7 +10,7 @@ function getProductPrice(productName) {
 
   for (const product of products) {
     if (product.name === productName) {
-      totalPrice = product.price * product.quantity;
+      return product.price;
     }
   }
 }
