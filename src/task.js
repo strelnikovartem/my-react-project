@@ -1,15 +1,20 @@
-const books = [
-  { title: "The Last Kingdom", author: "Bernard Cornwell" },
-  { title: "Beside Still Waters", author: "Robert Sheckley" },
-  { title: "The Dream of a Ridiculous Man", author: "Fyodor Dostoevsky" },
-];
+function getProductPrice(productName) {
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+  ];
 
-const authorToSearchFor = "Robert Sheckley";
+  const totalPrice = 0;
 
-for (const book of books) {
-  if (book.author === authorToSearchFor) {
-    console.log(book);
-    console.log(book.title);
-    console.log(book.rating);
+  for (const product of products) {
+    if (product.name === productName) {
+      totalPrice = product.price * product.quantity;
+    }
   }
 }
+
+console.log(getProductPrice("Radar"));
+console.log(getProductPrice("Engine"));
+console.log(getProductPrice("Scanner"));
