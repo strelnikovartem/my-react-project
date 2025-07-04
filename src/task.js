@@ -11,9 +11,10 @@ function getAllPropValues(propName) {
 
   for (const key of keys) {
     if (key === propName) {
-      return key ? array.push(key.propName) : [];
+      array.push(products[key]);
     }
   }
+  return array;
 }
 
 console.log(getAllPropValues("name"));
