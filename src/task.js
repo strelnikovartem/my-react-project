@@ -7,11 +7,10 @@ function getAllPropValues(propName) {
   ];
 
   const array = [];
-  const keys = Object.keys(products);
 
-  for (const key of keys) {
-    if (key === propName) {
-      array.push(products[key]);
+  for (const product of products) {
+    if (propName in product) {
+      array.push(product[propName]);
     }
   }
   return array;
@@ -20,3 +19,4 @@ function getAllPropValues(propName) {
 console.log(getAllPropValues("name"));
 console.log(getAllPropValues("quantity"));
 console.log(getAllPropValues("category"));
+console.log(getAllPropValues("price"));
