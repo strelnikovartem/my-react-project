@@ -1,20 +1,36 @@
-const books = [
-  { title: "The Last Kingdom", author: "Bernard Cornwell", rating: 8.2 },
-  { title: "Beside Still Waters", author: "Robert Sheckley", rating: 9 },
-  {
-    title: "The Dream of a Ridiculous Man",
-    author: "Fyodor Dostoevsky",
-    rating: 6.8,
-  },
-];
+// function getAllPropValues(propName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
 
-let totalRating = 0;
+//   const array = [];
 
-for (const book of books) {
-  totalRating += book.rating;
+//   for (const product of products) {
+//     array.push(product[propName]);
+//   }
+//   return array;
+// }
+
+// console.log(getAllPropValues("name"));
+// console.log(getAllPropValues("quantity"));
+// console.log(getAllPropValues("category"));
+
+function getProductPrice(productName) {
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+  ];
+  for (const product of products) {
+    if (product.name === productName) {
+      return product ? product.price : null;
+    }
+  }
 }
 
-console.log(totalRating);
-
-const averageRating = totalRating / books.length;
-console.log(averageRating); // 8
+console.log(getProductPrice("Radar"));
+console.log(getProductPrice("Engine"));
