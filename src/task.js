@@ -6,14 +6,16 @@ function calculateTotalPrice(productName) {
     { name: "Grip", price: 1200, quantity: 9 },
   ];
 
-  let totalPrice = 0;
-
   for (const product of products) {
-    console.log(product);
+    if (product.name === productName) {
+      return product.price * product.quantity;
+    }
   }
+
+  return `Product ${productName} not found!`;
 }
 
-console.log(calculateTotalPrice("Blaster"));
 console.log(calculateTotalPrice("Radar"));
 console.log(calculateTotalPrice("Grip"));
 console.log(calculateTotalPrice("Droid"));
+console.log(calculateTotalPrice("Blaster"));
