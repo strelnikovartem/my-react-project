@@ -1,14 +1,15 @@
-const bookShelf = {
-  books: ["The Last Kingdom"],
-  getBooks() {
-    return this.books;
+const atTheOldToad = {
+  potions: ["Speed potion", "Stone skin"],
+  getPotions() {
+    return this.potions;
   },
-  addBook(bookName) {
-    this.books.push(bookName);
+  addPotion(potionName) {
+    this.potions.push(potionName);
   },
 };
 
-console.log(bookShelf.getBooks()); // ["The Last Kingdom"]
-bookShelf.addBook("The Mist");
-bookShelf.addBook("Dream Guardian");
-console.log(bookShelf.getBooks()); // ["The Last Kingdom", "The Mist", "Dream Guardian"]
+console.log(atTheOldToad.getPotions());
+atTheOldToad.addPotion("Invisibility");
+atTheOldToad.addPotion("Power potion");
+console.log(atTheOldToad.getPotions());
+console.log();
