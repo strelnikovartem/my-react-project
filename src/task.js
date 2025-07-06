@@ -1,8 +1,17 @@
-const obj = {
-  method(value) {
-    console.log(`I'm a method with ${value}!`);
+// ✅ Логічно й синтаксично згруповані сутності
+const bookShelf = {
+  books: ["The Last Kingdom", "Dream Guardian"],
+  // Це метод об'єкта
+  getBooks() {
+    return "Returning all books";
+  },
+  // Це метод об'єкта
+  addBook(bookName) {
+    return `Adding book ${bookName}`;
   },
 };
 
-obj.method(56); // "I'm a method with 5!"
-obj.method(10); // "I'm a method with 10!"
+// Виклики методів
+bookShelf.getBooks(); // поверне "Returning all books"
+bookShelf.addBook("New book 1"); // поверне "Adding book New book 1"
+bookShelf.addBook("New book 2"); // поверне "Adding book New book 2"
