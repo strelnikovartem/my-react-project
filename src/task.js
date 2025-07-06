@@ -3,14 +3,15 @@ const bookShelf = {
     { title: "The Last Kingdom", rating: 8 },
     { title: "The Mist", rating: 6 },
   ],
-  getBooks() {
-    return this.books;
-  },
-  addBook(newBook) {
-    this.books.push(newBook);
+  getAvarageRating() {
+    let totalRating = 0;
+
+    for (const book of this.books) {
+      totalRating += book.rating;
+    }
+    console.log(this.books.length);
+    return totalRating / this.books.length;
   },
 };
 
-bookShelf.addBook({ title: "Dream Guardian", rating: 9 });
-
-console.log(bookShelf.books);
+bookShelf.getAvarageRating(); // 7
