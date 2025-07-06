@@ -1,8 +1,6 @@
 const bookShelf = {
-  books: ["The Last Kingdom", "The Mist"],
-  getBooks() {
-    console.log(bookShelf);
-  },
+  books: ["The Last Kingdom"],
 };
 
-bookShelf.getBooks(); // {books: ["The Last Kingdom", "The Mist"], getBooks: f}
+bookShelf.books.push("The Mist");
+console.log(bookShelf.books); // ["The Last Kingdom", "The Mist"]
