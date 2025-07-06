@@ -1,13 +1,8 @@
-const atTheOldToad = {
-  potions: [],
-  getPotions() {
-    return "List of all available potions";
-  },
-  addPotion(potionName) {
-    return `Adding ${potionName}`;
+const bookShelf = {
+  books: ["The Last Kingdom", "The Mist"],
+  getBooks() {
+    console.log(bookShelf);
   },
 };
 
-console.log(atTheOldToad.getPotions());
-console.log(atTheOldToad.addPotion("Invisibility"));
-console.log(atTheOldToad.addPotion("Power potion"));
+bookShelf.getBooks(); // {books: ["The Last Kingdom", "The Mist"], getBooks: f}
