@@ -12,6 +12,6 @@ const bookShelf = {
 };
 
 // Виклики методів
-bookShelf.getBooks(); // поверне "Returning all books"
-bookShelf.addBook("New book 1"); // поверне "Adding book New book 1"
-bookShelf.addBook("New book 2"); // поверне "Adding book New book 2"
+console.log(bookShelf.getBooks()); // поверне "Returning all books"
+console.log(bookShelf.addBook("New book 1")); // поверне "Adding book New book 1"
+console.log(bookShelf.addBook("New book 2")); // поверне "Adding book New book 2"
