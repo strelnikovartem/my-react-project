@@ -1,17 +1,13 @@
-// ✅ Логічно й синтаксично згруповані сутності
-const bookShelf = {
-  books: ["The Last Kingdom", "Dream Guardian"],
-  // Це метод об'єкта
-  getBooks() {
-    return "Returning all books";
+const atTheOldToad = {
+  potions: [],
+  getPotions() {
+    return "List of all available potions";
   },
-  // Це метод об'єкта
-  addBook(bookName) {
-    return `Adding book ${bookName}`;
+  addPotion(potionName) {
+    return `Adding ${potionName}`;
   },
 };
 
-// Виклики методів
-console.log(bookShelf.getBooks()); // поверне "Returning all books"
-console.log(bookShelf.addBook("New book 1")); // поверне "Adding book New book 1"
-console.log(bookShelf.addBook("New book 2")); // поверне "Adding book New book 2"
+console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.addPotion("Invisibility"));
+console.log(atTheOldToad.addPotion("Power potion"));
