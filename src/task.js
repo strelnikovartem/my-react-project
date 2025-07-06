@@ -7,15 +7,6 @@ function calculateTotalPrice(productName) {
   ];
 
   let totalPrice = 0;
-
-  for (const product of products) {
-    console.log(product[productName]);
-    if (product[productName] !== productName) {
-      totalPrice = `Product <productName> not found!`;
-    }
-    totalPrice = product.price * product.quantity;
-  }
-  return totalPrice;
 }
 
 console.log(calculateTotalPrice("Blaster"));
