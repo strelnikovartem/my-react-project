@@ -1,17 +1,26 @@
-const bookShelf = {
-  books: [
-    { title: "The Last Kingdom", rating: 8 },
-    { title: "The Mist", rating: 6 },
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Stone skin", price: 520 },
   ],
-  getAvarageRating() {
-    let totalRating = 0;
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    this.potions.push(newPotion);
+  },
+  getTotalPrice() {
+    let totalPrice = 0;
 
-    for (const book of this.books) {
-      totalRating += book.rating;
+    for (const item of this.potions) {
+      totalPrice += item.price;
     }
-    console.log(this.books.length);
-    return totalRating / this.books.length;
+    return totalPrice;
   },
 };
 
-bookShelf.getAvarageRating(); // 7
+console.log(atTheOldToad.getPotions());
+atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+atTheOldToad.addPotion({ name: "Power potion", price: 270 });
+console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.getTotalPrice());
