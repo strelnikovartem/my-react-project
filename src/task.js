@@ -1,7 +1,12 @@
-function multiply(fi, sec, ...args) {
-  console.log(fi, sec, args);
+function getExtremeScores(scores) {
+  const best = Math.max(...scores);
+  const wrost = Math.min(...scores);
+  const total = {
+    best,
+    wrost,
+  };
+  return total;
 }
 
-multiply(1, 2); // 1 2
-multiply(1, 2, 3); // 1 2 [3]
-multiply(1, 2, 3, 4); // 1 2 [3, 4]
+console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
+console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
