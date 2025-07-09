@@ -1,5 +1,5 @@
-function greet(name) {
-  console.log(`Welcome ${name}!`);
+function greet(n) {
+  console.log(`Welcome ${n}!`);
 }
 
 function notify(name) {
@@ -14,7 +14,7 @@ function registerGuest(name, callback) {
 registerGuest("Mango", greet); // "Registering Mango!"
 // "Welcome Mango!"
 
-registerGuest("Mango", notify); // "Registering Mango!"
+registerGuest("ggg", notify); // "Registering Mango!"
 // "Dear Mango, your room will be ready in 30 minutes"
 
 console.log(greet);
