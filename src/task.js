@@ -1,20 +1,13 @@
-function notify(name) {
-  console.log(`Dear ${name}, your room will be ready in 30 minutes`);
+function deliverPizza(pizzaName) {
+  return `Delivering ${pizzaName} pizza.`;
 }
 
-function registerGuest(na, call) {
-  console.log(`Registering ${na}!`);
-  call(na);
+function makePizza(pizzaName) {
+  return `Pizza ${pizzaName} is being prepared, please wait...`;
 }
 
-registerGuest("Mango", greet); // "Registering Mango!"
-// "Welcome Mango!"
-
-registerGuest("ggg", notify); // "Registering Mango!"
-// "Dear Mango, your room will be ready in 30 minutes"
-
-console.log(greet);
-
-function greet(n) {
-  console.log(`Welcome ${n}!`);
+function makeMessage(pizzaName) {
+  return;
 }
+
+console.log(makeMessage("Royal Grand", makePizza));
