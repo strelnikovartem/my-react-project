@@ -1,27 +1,11 @@
-function registerGuest(name, callback) {
-  console.log(`Registering ${name}!`);
-  callback(name);
+const numbers = [5, 10, 15, 20, 25];
+
+// Класичний for
+for (let i = 0; i < numbers.length; i += 1) {
+  console.log(`Index ${i}, value ${numbers[i]}`);
 }
 
-// Передаємо інлайн-функцію greet у якості колбека
-registerGuest("Mango", function greet(name) {
-  console.log(`Welcome ${name}!`);
-});
-
-// Передаємо інлайн-функцію notify у якості колбека
-registerGuest("Poly", function notify(name) {
-  console.log(`Dear ${name}, your room will be ready in 30 minutes`);
-});
-
-function makePizza(pizzaName, callback) {
-  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
-  callback(pizzaName);
-}
-
-makePizza("Royal Grand", function deliverPizza(pizzaName) {
-  console.log(`Delivering pizza ${pizzaName}`);
-});
-
-makePizza("Ultracheese", function eatPizza(pizzaName) {
-  console.log(`Eating pizza ${pizzaName}`);
+// Перебираючий метод forEach
+numbers.forEach(function (number, index) {
+  console.log(`Index ${index}, value ${number}`);
 });
