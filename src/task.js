@@ -9,3 +9,13 @@ for (let i = 0; i < numbers.length; i += 1) {
 numbers.forEach(function (number, index) {
   console.log(`Index ${index},`);
 });
+
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+
+  orderedItems.forEach();
+
+  return totalPrice;
+}
+
+console.log(calculateTotalPrice([12, 85, 37, 4]));
