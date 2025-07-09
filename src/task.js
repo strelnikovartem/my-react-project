@@ -1,21 +1,9 @@
-const first = { propA: 5, propB: 10 };
-const second = { propC: 15 };
-const third = { ...first, ...second };
-console.log(third); // { propA: 5, propB: 10, propC: 15 }
+function greet(name) {
+  return `Welcome ${name}!`;
+}
 
-const defaultSettings = {
-  theme: "light",
-  public: true,
-  withPassword: false,
-  minNumberOfQuestions: 10,
-  timePerQuestion: 60,
-};
-const overrideSettings = {
-  public: false,
-  withPassword: true,
-  timePerQuestion: 30,
-};
+// Викликаємо функцію greet і виводимо результат у консоль
+console.log(greet("Mango")); // "Welcome Mango!"
 
-const finalSettings = { ...defaultSettings, ...overrideSettings };
-
-console.log(finalSettings);
+// Виводимо функцію greet у консоль, не викликаючи її
+console.log(greet); // ƒ greet() {return `Welcome ${name}!`}
