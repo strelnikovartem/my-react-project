@@ -2,9 +2,9 @@ function notify(name) {
   console.log(`Dear ${name}, your room will be ready in 30 minutes`);
 }
 
-function registerGuest(name, callback) {
-  console.log(`Registering ${name}!`);
-  callback(name);
+function registerGuest(na, callback) {
+  console.log(`Registering ${na}!`);
+  callback(na);
 }
 
 registerGuest("Mango", greet); // "Registering Mango!"
