@@ -16,3 +16,5 @@ registerGuest("Mango", greet); // "Registering Mango!"
 
 registerGuest("Mango", notify); // "Registering Mango!"
 // "Dear Mango, your room will be ready in 30 minutes"
+
+console.log(greet);
