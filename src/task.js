@@ -10,14 +10,30 @@ numbers.forEach(function (number, index) {
   console.log(`Index ${index},`);
 });
 
-function calculateTotalPrice(orderedItems) {
-  let totalPrice = 0;
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
 
-  orderedItems.forEach(function (n) {
-    totalPrice += n;
+//   orderedItems.forEach(function (n) {
+//     totalPrice += n;
+//   });
+
+//   return totalPrice;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+function filterArray(numbers, value) {
+  let totalArray = [];
+
+  numbers.forEach(function (num) {
+    if (num > value) {
+      totalArray.push(num);
+    }
   });
-
-  return totalPrice;
+  return totalArray;
 }
 
-console.log(calculateTotalPrice([12, 85, 37, 4]));
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+console.log(filterArray([1, 2, 3, 4, 5], 4));
+console.log(filterArray([1, 2, 3, 4, 5], 5));
+console.log(filterArray([12, 24, 8, 41, 76], 20));
