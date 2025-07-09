@@ -7,5 +7,5 @@ for (let i = 0; i < numbers.length; i += 1) {
 
 // Перебираючий метод forEach
 numbers.forEach(function (number, index) {
-  console.log(`Index ${index}, value ${number}`);
+  console.log(`Index ${index},`);
 });
