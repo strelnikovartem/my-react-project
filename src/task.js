@@ -1,7 +1,3 @@
-function greet(n) {
-  console.log(`Welcome ${n}!`);
-}
-
 function notify(name) {
   console.log(`Dear ${name}, your room will be ready in 30 minutes`);
 }
@@ -18,3 +14,7 @@ registerGuest("ggg", notify); // "Registering Mango!"
 // "Dear Mango, your room will be ready in 30 minutes"
 
 console.log(greet);
+
+function greet(n) {
+  console.log(`Welcome ${n}!`);
+}
