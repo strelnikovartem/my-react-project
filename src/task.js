@@ -13,7 +13,9 @@ numbers.forEach(function (number, index) {
 function calculateTotalPrice(orderedItems) {
   let totalPrice = 0;
 
-  orderedItems.forEach();
+  orderedItems.forEach(function (n) {
+    totalPrice += n;
+  });
 
   return totalPrice;
 }
