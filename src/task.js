@@ -12,3 +12,16 @@ registerGuest("Mango", function greet(name) {
 registerGuest("Poly", function notify(name) {
   console.log(`Dear ${name}, your room will be ready in 30 minutes`);
 });
+
+function makePizza(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
+}
+
+makePizza("Royal Grand", function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}`);
+});
+
+makePizza("Ultracheese", function eatPizza(pizzaName) {
+  console.log(`Eating pizza ${pizzaName}`);
+});
