@@ -11,3 +11,5 @@ function makeMessage(pizzaName) {
 }
 
 console.log(makeMessage("Royal Grand", makePizza));
+
+console.log(makeMessage("Ultracheese", deliverPizza));
