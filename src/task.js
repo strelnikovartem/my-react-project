@@ -1,11 +1,21 @@
-const students = [
-  { name: "Mango", courses: ["mathematics", "physics"] },
-  { name: "Poly", courses: ["science", "mathematics"] },
-  { name: "Kiwi", courses: ["physics", "biology"] },
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism"],
+  },
 ];
 
-const mappedCourses = students.map((student) => student.courses);
-console.log(mappedCourses); // [["mathematics", "physics"], ["science", "mathematics"], ["physics", "biology"]]
+const genres = books.flatMap((i) => i.genres);
 
-const flattenedCourses = students.flatMap((student) => student.courses);
-console.log(flattenedCourses); // ["mathematics", "physics", "science", "mathematics", "physics", "biology"];
+console.log(genres);
