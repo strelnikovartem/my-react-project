@@ -1,6 +1,6 @@
 const planets = ["Earth", "Mars", "Venus", "Jupiter"];
 
-const planetsInUpperCase = planets.map((planet) => planet.toUpperCase());
+const planetsInUpperCase = planets.map((i) => i.toUpperCase());
 console.log(planetsInUpperCase); // ["EARTH", "MARS", "VENUS", "JUPITER"]
 
 const planetsInLowerCase = planets.map((planet) => planet.toLowerCase());
