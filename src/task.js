@@ -1,18 +1,42 @@
-const students = [
-  { name: "Mango", score: 83 },
-  { name: "Poly", score: 59 },
-  { name: "Ajax", score: 37 },
-  { name: "Kiwi", score: 94 },
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    rating: 7.94,
+  },
+  {
+    title: "Enemy of God",
+    author: "Bernard Cornwell",
+    rating: 8.67,
+  },
 ];
 
-const inAscendingScoreOrder = students.toSorted((a, b) => b.score - a.score);
-
-const inDescendingScoreOrder = students.toSorted(
-  (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+const sortedByAuthorName = books.toSorted((a, b) =>
+  a.author.localeCompare(b.author)
 );
 
-const inAlphabeticalOrder = students.toSorted((firstStudent, secondStudent) =>
-  firstStudent.name.localeCompare(secondStudent.name)
+const sortedByReversedAuthorName = books.toSorted((a, b) =>
+  b.author.localeCompare(a.author)
 );
 
-console.log(inAscendingScoreOrder);
+const sortedByAscendingRating = books.toSorted((a, b) => a - b);
+
+const sortedByDescentingRating = books.toSorted((a, b) => b - a);
+
+console.log(sortedByAuthorName);
+console.log(sortedByReversedAuthorName);
