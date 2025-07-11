@@ -6,7 +6,7 @@ const authors = [
   "Fyodor Dostoevsky",
 ];
 
-const ascendingReleaseDates = releaseDates.toSorted();
+const ascendingReleaseDates = releaseDates.toSorted((a, b) => b - a);
 
 const alphabeticalAuthors = authors.toSorted();
 
