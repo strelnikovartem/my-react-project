@@ -1,5 +1,14 @@
-const scores = [61, 19, 74, 35, 92, 56];
-const ascendingScores = scores.toSorted();
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+];
 
-console.log(scores); // [61, 19, 74, 35, 92, 56]
-console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
+const ascendingReleaseDates = releaseDates.toSorted();
+
+const alphabeticalAuthors = authors.toSorted();
+
+console.log(ascendingReleaseDates);
+console.log(alphabeticalAuthors);
