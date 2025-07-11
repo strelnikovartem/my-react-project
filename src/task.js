@@ -1,14 +1,7 @@
-const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
-const authors = [
-  "Tanith Lee",
-  "Bernard Cornwell",
-  "Robert Sheckley",
-  "Fyodor Dostoevsky",
-];
+const students = ["Jacob", "Artemis", "Solomon", "Adrian", "Kai", "Ganymede"];
 
-const ascendingReleaseDates = releaseDates.toSorted((a, b) => b - a);
+const inAlphabetOrder = students.toSorted((a, b) => a.localeCompare(b));
+console.log(inAlphabetOrder); // [ "Adrian", "Artemis", "Ganymede", "Jacob", "Kai", "Solomon" ]
 
-const alphabeticalAuthors = authors.toSorted();
-
-console.log(ascendingReleaseDates);
-console.log(alphabeticalAuthors);
+const inReversedOrder = students.toSorted((a, b) => b.localeCompare(a));
+console.log(inReversedOrder); // [ "Solomon", "Kai", "Jacob", "Ganymede", "Artemis", "Adrian" ]
