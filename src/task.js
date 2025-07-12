@@ -15,7 +15,7 @@ console.log(names); // ["Ajax", "Poly", "Mango", "Kiwi"]
 
 const uniqueSortedCourses = students
   .flatMap((student) => student.courses)
-  .filter((course, index, array) => array.indexOf(course) === index);
-// .toSorted((a, b) => a.localeCompare(b));
+  .filter((course, index, array) => array.indexOf(course) === index)
+  .toSorted((a, b) => a.localeCompare(b));
 
 console.log(uniqueSortedCourses); // ["biology", "science", "literature", "mathematics", "physics"]
