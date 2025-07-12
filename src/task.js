@@ -5,9 +5,8 @@ const students = [
   { name: "Kiwi", score: 94, courses: ["literature", "science"] },
 ];
 
-const names = students
-  .toSorted((a, b) => a.score - b.score)
-  .map((student) => student.name);
+const names = students.toSorted((a, b) => a.score - b.score);
+// .map((student) => student.name);
 
 console.log(names); // ["Ajax", "Poly", "Mango", "Kiwi"]
 
